@@ -13,9 +13,10 @@ const TransactionSchema = new Schema({
   userId: {
     type: Schema.Types.ObjectId,
     ref: 'User',
+    require:true
   }
 },{ timestamps: true });
 
 
 
-export const transactionModel = model("transctions", TransactionSchema);
+export const transactionModel = model("transactions", TransactionSchema);

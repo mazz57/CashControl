@@ -1,6 +1,6 @@
 import express  from "express";
 import { transactionModel } from "../models/Transaction.model.js";
-import { addTransaction, getTransaction, getTransactionById, updateTransaction, deleteTransaction } from "../controllers/transaction.controller.js";
+import { addTransaction, getTransaction, getTransactionById, updateTransaction, deleteTransaction, getSummart } from "../controllers/transaction.controller.js";
 
 
 
@@ -11,6 +11,7 @@ router.get('/', getTransaction);
 router.get('/:id', getTransactionById)
 router.put('/:id', updateTransaction);
 router.delete('/:id', deleteTransaction);
+router.get('/',getSummart);
 
 
 export default router;
